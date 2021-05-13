@@ -2,7 +2,7 @@
 Schedule Manager Project for SS1\
 Folders:
 - database: Use MongoDB to import.
-- ss1: Contains all the source code, the database set up should be edited in db.js, the port should be edited in index.js, the default port is 5600.\
+- ss1: Contains all the source code, the database set up should be edited in db.js, the port should be edited in index.js, the default port is 5600.
 
 * Sample admin account:\
 Username: admin@gmail.com\
