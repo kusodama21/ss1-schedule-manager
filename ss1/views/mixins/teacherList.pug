@@ -1,0 +1,31 @@
+mixin teacherList(teachers, msg)
+    div
+        h1 Teacher List Mixin
+
+        if msg
+            p Message: #{msg}
+
+        table(style='width:100%')
+            tbody
+                tr
+                    th ID
+                    th Profile Picture
+                    th Name
+                    th Email
+                    th Action 1
+                each teacher in teachers
+                    - const picLink = '../../public/pics/save/' + teacher.pic
+                    - const viewLink = '/admin/teacher/' + teacher.id
+                    - const deleteLink = '/admin/teacher/' + teacher.id + '/delete'
+
+                    tr
+                        th #{teacher.id}
+                        th
+                            img(src=picLink alt='profile_picture' width='50' height='50' style='border-radius:50%')
+                        
+                        th
+                            a(href=viewLink) #{teacher.name}
+                        th #{teacher.email}
+                        th
+                            form(action=deleteLink method='POST')
+                                input(type='submit' value='Delete')

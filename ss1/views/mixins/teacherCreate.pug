@@ -1,0 +1,15 @@
+mixin teacherCreate(msg)
+    div
+        h1 Teacher Create Mixin
+
+        if msg
+            p Message: #{msg}
+
+        form(action='/admin/teacher/create' method='POST')
+            label(for='name') Name:
+            input(type='text' name='name')
+            br
+            label(for='email') Email: 
+            input(type='text' name='email')
+            br
+            input(type='submit' value='Submit')

@@ -1,0 +1,14 @@
+mixin editPicture(user, msg)
+    div
+        h1 Edit Picture Mixin
+
+        if msg
+            p Failure: #{msg}
+        
+        - const actionLink = (user.type === 0? '/admin' : '/teacher') + '/edit/picture/' + user.id 
+        form(enctype='multipart/form-data' action=actionLink method='POST')
+            label(for='file') Upload new picture:
+            br
+            input(type='file' name='file')
+            br
+            input(type='submit' vallue='Submit change')

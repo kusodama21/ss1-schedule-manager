@@ -1,0 +1,29 @@
+mixin header(user)
+    div
+        h1 Header Mixin
+
+        - const picLink = '../../public/pics/save/' + user.pic
+        img(src=picLink alt='profile_picture' height='50' width='50' style='border-radius:50%')
+        br
+
+        p #{user.email}
+
+        - const subject = (user.type === 0? '/admin' : '/teacher')
+
+        - const viewLink = subject + '/view'
+        a(href=viewLink)
+            button View profile
+        br
+
+        - const editInfoLink = subject + '/edit/info'
+        a(href=editInfoLink)
+            button Edit profile information
+        br
+
+        - const editPictureLink = subject + '/edit/picture'
+        a(href=editPictureLink)
+            button Edit profile picture
+        br
+
+        form(action='/logout' method='POST')
+            input(type='submit' value='Logout')

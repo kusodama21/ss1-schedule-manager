@@ -1,0 +1,21 @@
+doctype html
+html(lang='en')
+    head
+        meta(charset='UTF-8')
+        meta(name='viewport' content='width=device-width, initial-scale=1.0')
+        title Login
+
+    body
+        h1 Login Page
+
+        if msg
+            p Failure: #{msg}
+
+        form(action='/login' method='POST')
+            label(for='email') Email: 
+            input(type='text' name='email')
+            br
+            label(for='password') Password: 
+            input(type ='password' name='password')
+            br
+            input(type='submit' value='Login')

@@ -1,0 +1,30 @@
+mixin teacherAppointE(appoints)
+    div
+        h1 Teacher Appoint E Mixin
+
+        button(id='past') Past Appointments
+        br
+        button(id='current') Current Appointments
+        br
+        button(id='future') Future Appoitments
+        br
+        button(id='all') See All Appointments
+        br
+
+        table(style='width:100%')
+            tbody
+                tr
+                    th ID
+                    th Class
+                    th Room
+                    th Start
+                    th End
+                    th Date
+                each appoint in appoints
+                    tr(id=appoint.mark class='appoint')
+                        th #{appoint.id}
+                        th #{appoint.className}
+                        th #{appoint.roomName}
+                        th #{appoint.start}
+                        th #{appoint.end}
+                        th #{appoint.date}

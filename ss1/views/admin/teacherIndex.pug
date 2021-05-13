@@ -1,0 +1,7 @@
+extends ../layout.pug 
+include ../mixins/teacherCreate.pug
+include ../mixins/teacherList.pug
+
+block content
+    +teacherCreate(msgTeacherCreate)
+    +teacherList(teachers, msgTeacherList)

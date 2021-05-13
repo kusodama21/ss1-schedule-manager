@@ -1,0 +1,21 @@
+include ./mixins/header.pug 
+include ./mixins/sidebar.pug
+
+
+doctype html
+html(lang='en')
+    head
+        meta(charset='UTF-8')
+        meta(name='viewport' content='width=device-width, initial-scale=1.0')
+        title #{title}
+        style
+            include ../public/css/layout.css
+
+    body
+        +header(user)
+        +sidebar(user.type)
+
+        block content
+
+        script
+            include ../public/js/appoint.js

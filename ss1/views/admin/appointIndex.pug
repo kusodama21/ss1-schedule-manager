@@ -1,0 +1,7 @@
+extends ../layout.pug 
+include ../mixins/appointCreate.pug
+include ../mixins/appointList.pug
+
+block content
+    +appointCreate(teachers, classes, rooms, msgAppointCreate)
+    +appointList(appoints, msgAppointList)

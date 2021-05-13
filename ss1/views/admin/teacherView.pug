@@ -1,0 +1,7 @@
+extends ../layout.pug 
+include ../mixins/view.pug
+include ../mixins/teacherAppoint.pug
+
+block content
+    +view(teacher, null)
+    +teacherAppoint(appoints, msgTeacherAppoint)
